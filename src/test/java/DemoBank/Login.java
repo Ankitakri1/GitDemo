@@ -1,5 +1,6 @@
 package DemoBank;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -13,6 +14,8 @@ public class Login {
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("http://www.demo.guru99.com/V4/");
-
+		driver.findElement(By.name("uid")).sendKeys("mngr306727");
+		driver.findElement(By.name("password")).sendKeys("emAruhE");
+		driver.findElement(By.name("btnLogin")).click();
 	}
 }

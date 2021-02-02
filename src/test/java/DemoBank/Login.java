@@ -18,7 +18,19 @@ public class Login {
 		driver.findElement(By.name("btnLogin")).click();
 
 		
-		//verify login successful	
+		//verify login successful
+		
+		String expectTitle = "Guru99 Bank Manager HomePage";
+		
+		
+		
+		if(expectTitle.equals(driver.getTitle())) {
+			System.out.println("Login Successful");
+		}
+		
+		else {
+			System.out.println("Login unsuccessful");
+		}
 	}
 	
 	public static void launchBrowser() {
